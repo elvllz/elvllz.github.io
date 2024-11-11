@@ -23,11 +23,49 @@
         .card {
             border-radius: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Add box-shadow transition */
+        }
+
+        .card:hover {
+            transform: translateY(-5px) scale(1.05);
+            border-color: #4b2662; 
+            animation: bounce 0.3s ease; 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
         }
 
         .card-img-top {
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
+        }
+
+        
+        .card.project1:hover {
+            background-color: #dfafe0; 
+            color: #4b2662;
+        }
+
+        .card.project2:hover {
+            background-color: #dfafe0; 
+            
+            color: #4b2662;
+        }
+
+        .card.project3:hover {
+            background-color: #dfafe0; 
+            color: #4b2662;
+        }
+
+        /* Animation */
+        @keyframes bounce {
+          0% {
+            transform: translateY(-5px) scale(1.05);
+          }
+          50% {
+            transform: translateY(0) scale(1.02);
+          }
+          100% {
+            transform: translateY(-5px) scale(1.05);
+          }
         }
     </style>
 </head>
@@ -39,15 +77,14 @@
     <main class="container mt-4">
         <div class="row">
             <div class="col-md-4 mb-4">
-                <a href="project1.html" class="card">
-                    <img src="img/1.png" class="card-img-top" alt="Project 1 Image">
+                <a href="project1.html" class="card project1"> <img src="img/1.png" class="card-img-top" alt="Project 1 Image">
                     <div class="card-body">
                         <h5 class="card-title">Project 1</h5>
                     </div>
                 </a>
             </div>
             <div class="col-md-4 mb-4">
-                <a href="project2.html" class="card">
+                <a href="project2.html" class="card project2">
                     <img src="img/2.png" class="card-img-top" alt="Project 2 Image">
                     <div class="card-body">
                         <h5 class="card-title">Project 2</h5>
@@ -55,7 +92,7 @@
                 </a>
             </div>
             <div class="col-md-4 mb-4">
-                <a href="project3.html" class="card">
+                <a href="project3.html" class="card project3">
                     <img src="img/3.png" class="card-img-top" alt="Project 3 Image">
                     <div class="card-body">
                         <h5 class="card-title">Project 3</h5>
