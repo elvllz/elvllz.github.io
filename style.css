@@ -1,0 +1,109 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+}
+
+
+
+.card {
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.05);
+    border-color: #4b2662;
+    animation: bounce 0.3s ease; 
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-link {
+    text-decoration: none;
+    color: #4b2662;
+}
+
+
+.country-page {
+    padding: 20px;
+}
+
+.country-title {
+    color: #4b2662;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.category {
+    margin-bottom: 30px;
+}
+
+.category-title {
+    color: #4b2662;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.category-item {
+    width: calc(33.33% - 10px);
+    margin-bottom: 15px;
+}
+
+.category-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.category-description {
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+/* Animation */
+@keyframes bounce {
+  0% {
+    transform: translateY(-5px) scale(1.05);
+  }
+  50% {
+    transform: translateY(0) scale(1.02);
+  }
+  100% {
+    transform: translateY(-5px) scale(1.05);
+  }
+}
+
+/* Card Hover Colors */
+.card.japan:hover {
+    background-color: #e6b800; /* Japan */
+    color: white;
+}
+
+.card.korea:hover {
+    background-color: #007bff; /* Korea */
+    color: white;
+}
+
+.card.switzerland:hover {
+    background-color: #d3d3d3; /* Switzerland */
+    color: black;
+}
+
+.card.canada:hover {
+    background-color: #ff0000; /* Canada */
+    color: white;
+}
