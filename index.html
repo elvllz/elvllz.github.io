@@ -30,7 +30,7 @@
             transform: translateY(-5px) scale(1.05);
             border-color: #4b2662; 
             animation: bounce 0.3s ease; 
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
         }
 
         .card-img-top {
@@ -67,6 +67,20 @@
             transform: translateY(-5px) scale(1.05);
           }
         }
+
+        .btn-project {
+            background-color: #4b2662; 
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            border: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-project:hover {
+            background-color: #7a5195; 
+        }
     </style>
 </head>
 <body>
@@ -79,7 +93,7 @@
             <div class="col-md-4 mb-4">
                 <a href="project1.html" class="card project1"> <img src="img/1.png" class="card-img-top" alt="Project 1 Image">
                     <div class="card-body">
-                        <h5 class="card-title">Project 1</h5>
+                        <button class="btn-project">Project 1</button>
                     </div>
                 </a>
             </div>
@@ -87,7 +101,7 @@
                 <a href="project2.html" class="card project2">
                     <img src="img/2.png" class="card-img-top" alt="Project 2 Image">
                     <div class="card-body">
-                        <h5 class="card-title">Project 2</h5>
+                        <button class="btn-project">Project 2</button>
                     </div>
                 </a>
             </div>
@@ -95,7 +109,7 @@
                 <a href="project3.html" class="card project3">
                     <img src="img/3.png" class="card-img-top" alt="Project 3 Image">
                     <div class="card-body">
-                        <h5 class="card-title">Project 3</h5>
+                        <button class="btn-project">Project 3</button>
                     </div>
                 </a>
             </div>
