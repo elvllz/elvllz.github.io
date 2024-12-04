@@ -14,70 +14,72 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            font-family: 'Lilita One', cursive; /* Apply Lilita One font */
-            margin: 0; /* Remove default body margins */
-            padding: 0; /* Remove default body padding */
-            overflow: hidden; /* Hide scrollbars */
+            font-family: 'Lilita One', cursive; 
+            margin: 0; 
+            padding: 0; 
+            overflow: hidden; 
         }
 
         .container {
-            display: flex; /* Use flexbox for layout */
-            justify-content: space-around; /* Space elements evenly */
-            align-items: center; /* Center items vertically */
-            width: 80%; /* Adjust container width as needed */
-            margin: 0 auto; /* Center container horizontally */
-            padding: 2rem; /* Add padding to the container */
+            display: flex; 
+            justify-content: space-around; 
+            align-items: center; 
+            width: 80%; 
+            margin: 0 auto; 
+            padding: 2rem; 
+            position: relative; 
         }
 
         .text-content {
-            text-align: left; /* Align text content to the left */
-            width: 50%; /* Adjust width as needed */
+            text-align: left; 
+            width: 50%; 
         }
 
         .error-code {
-            font-size: 200px; /* Set font size to 250px */
-            color: #432855; /* Dark Purple */
+            font-size: 200px; 
+            color: #432855; 
             font-weight: bold;
             margin-bottom: 1rem;
-            animation: bounce 2s infinite; /* Add bounce animation */
+            animation: bounce 2s infinite; 
         }
 
         .error-message {
-            font-size: 55px; /* Set font size to 65px */
-            color: #5D3F71; /* Dark Purple */
+            font-size: 55px; 
+            color: #5D3F71; 
             margin-bottom: 2rem;
-            animation: shake 0.5s infinite; /* Add shake animation */
+            animation: floatUpAndDown 4s infinite; 
         }
 
         .error-description {
-            font-size: 30px; /* Set font size to 35px */
-            color: #8c719c; /* Light Purple */
+            font-size: 30px; 
+            color: #8c719c; 
             margin-bottom: 2rem;
-            line-height: 1.5; /* Adjust line height for better spacing */
-            animation: fadeInOut 3s infinite; /* Add fade-in/out animation */
+            line-height: 1.5; 
+            animation: fadeInOut 3s infinite; 
         }
 
         .error-image {
-            width: 200px; /* Adjust width as needed */
-            height: 200px; /* Adjust height as needed */
+            width: 200px; 
+            height: 200px; 
             border-radius: 10px;
-            animation: spin 5s linear infinite; /* Add spin animation */
+            animation: spin 5s linear infinite; 
+            transition: transform 0.2s ease; 
         }
 
         .btn-homepage {
-            background-color: #432855; /* Dark Purple */
-            color: #f8f9fa; /* White */
+            background-color: #432855; 
+            color: #f8f9fa; 
             padding: 1rem 2rem;
             border: none;
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
             transition: background-color 0.3s ease;
-            animation: pulse 1.5s infinite; /* Add pulse animation */
+            animation: pulse 1.5s infinite; 
         }
 
         .btn-homepage:hover {
-            background-color: #333333; /* Darker Purple */
+            background-color: #333333; 
         }
 
         /* Animations */
@@ -93,39 +95,15 @@
             }
         }
 
-        @keyframes shake {
+        @keyframes floatUpAndDown {
             0% {
-                transform: translateX(0);
-            }
-            10% {
-                transform: translateX(-10px);
-            }
-            20% {
-                transform: translateX(10px);
-            }
-            30% {
-                transform: translateX(-10px);
-            }
-            40% {
-                transform: translateX(10px);
+                transform: translateY(0);
             }
             50% {
-                transform: translateX(-10px);
-            }
-            60% {
-                transform: translateX(10px);
-            }
-            70% {
-                transform: translateX(-10px);
-            }
-            80% {
-                transform: translateX(10px);
-            }
-            90% {
-                transform: translateX(-10px);
+                transform: translateY(-5px);
             }
             100% {
-                transform: translateX(0);
+                transform: translateY(0);
             }
         }
 
@@ -175,5 +153,23 @@
         </div>
         <img src="img/white.jpg" alt="Error Image" class="error-image"> 
     </div>
+
+    <script>
+        const errorImage = document.querySelector('.error-image');
+        const bounceSound = new Audio('bounce.mp3'); 
+        const thudSound = new Audio('thud.mp3'); 
+
+        errorImage.addEventListener('click', (event) => {
+            // Simulate bounce by scaling and translating
+            errorImage.style.transform = `scale(1.2)`; // Scale up slightly on bounce
+            setTimeout(() => {
+                errorImage.style.transform = `scale(1)`; // Return to normal scale
+            }, 100); // Adjust the delay for the bounce effect
+
+            // Play a random sound effect
+            const randomSound = Math.random() < 0.5 ? bounceSound : thudSound;
+            randomSound.play();
+        });
+    </script>
 </body>
 </html>
