@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Lilita One', cursive; /* Apply Lilita One font */
+            margin: 0; /* Remove default body margins */
+            padding: 0; /* Remove default body padding */
+            overflow: hidden; /* Hide scrollbars */
+        }
+
+        .container {
+            display: flex; /* Use flexbox for layout */
+            justify-content: space-around; /* Space elements evenly */
+            align-items: center; /* Center items vertically */
+            width: 80%; /* Adjust container width as needed */
+            margin: 0 auto; /* Center container horizontally */
+            padding: 2rem; /* Add padding to the container */
+        }
+
+        .text-content {
+            text-align: left; /* Align text content to the left */
+            width: 50%; /* Adjust width as needed */
+        }
+
+        .error-code {
+            font-size: 200px; /* Set font size to 250px */
+            color: #432855; /* Dark Purple */
+            font-weight: bold;
+            margin-bottom: 1rem;
+            animation: bounce 2s infinite; /* Add bounce animation */
+        }
+
+        .error-message {
+            font-size: 55px; /* Set font size to 65px */
+            color: #5D3F71; /* Dark Purple */
+            margin-bottom: 2rem;
+            animation: shake 0.5s infinite; /* Add shake animation */
+        }
+
+        .error-description {
+            font-size: 30px; /* Set font size to 35px */
+            color: #8c719c; /* Light Purple */
+            margin-bottom: 2rem;
+            line-height: 1.5; /* Adjust line height for better spacing */
+            animation: fadeInOut 3s infinite; /* Add fade-in/out animation */
+        }
+
+        .error-image {
+            width: 200px; /* Adjust width as needed */
+            height: 200px; /* Adjust height as needed */
+            border-radius: 10px;
+            animation: spin 5s linear infinite; /* Add spin animation */
+        }
+
+        .btn-homepage {
+            background-color: #432855; /* Dark Purple */
+            color: #f8f9fa; /* White */
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            animation: pulse 1.5s infinite; /* Add pulse animation */
+        }
+
+        .btn-homepage:hover {
+            background-color: #333333; /* Darker Purple */
+        }
+
+        /* Animations */
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes shake {
+            0% {
+                transform: translateX(0);
+            }
+            10% {
+                transform: translateX(-10px);
+            }
+            20% {
+                transform: translateX(10px);
+            }
+            30% {
+                transform: translateX(-10px);
+            }
+            40% {
+                transform: translateX(10px);
+            }
+            50% {
+                transform: translateX(-10px);
+            }
+            60% {
+                transform: translateX(10px);
+            }
+            70% {
+                transform: translateX(-10px);
+            }
+            80% {
+                transform: translateX(10px);
+            }
+            90% {
+                transform: translateX(-10px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-content">
+            <div class="error-code">404</div>
+            <div class="error-message">Oops! Page Not Found</div>
+            <div class="error-description">
+                We couldn’t find what you were looking for. Shocking, I know. Want to stay here? Then don’t click the homepage, bye!
+            </div>
+            <a href="/" class="btn-homepage">Homepage</a>
+        </div>
+        <img src="img/white.jpg" alt="Error Image" class="error-image"> 
+    </div>
+</body>
+</html>
